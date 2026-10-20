@@ -161,7 +161,7 @@
     .card h3 { font-size: 22px; margin-bottom: 15px; color: var(--accent); }
     .card p { color: var(--text-muted); font-size: 15px; }
     
-    /* تنسيق صور لقطات الشاشة للنتائج والأرقام */
+    /* تنسيق صور لقطات الشاشة الحقيقية */
     .results-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -187,26 +187,6 @@
       border: 1px solid var(--border);
       margin-top: 15px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-    }
-    .stats-row {
-      display: flex;
-      justify-content: space-around;
-      background: var(--bg);
-      padding: 15px;
-      border-radius: 8px;
-      margin-top: 15px;
-      border: 1px solid var(--border);
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .stat-item span {
-      display: block;
-      font-size: 13px;
-      color: var(--text-muted);
-    }
-    .stat-item strong {
-      font-size: 18px;
-      color: var(--accent);
     }
 
     .testimonials {
@@ -300,7 +280,7 @@
       </div>
     </section>
 
-    <!-- قسم تحاليل وأرقام الحملات مع لقطات الشاشة الحقيقية -->
+    <!-- قسم عرض لقطات الشاشة الحقيقية لإحصائيات الحملات -->
     <section id="results">
       <span>03 — TRACK RECORD & ANALYTICS</span>
       <h2>تحاليل ولقطات حقيقية من إحصائيات الحسابات والحملات.</h2>
@@ -308,27 +288,22 @@
         
         <div class="result-box">
           <h3>📊 تقرير الأداء الشامل وإجمالي الإنفاق</h3>
-          <p style="color: var(--text-muted);">إدارة ميزانيات ضخمة وتحقيق ملايين المشاهدات والوصول.</p>
-          <!-- عرض صورتك الأولى المرفوعة -->
           <img src="Screenshot 2026-10-20 194522.png" alt="تقرير أداء الحملات">
         </div>
 
         <div class="result-box">
           <h3>🚀 نتائج الحملات والتفاعل القياسي</h3>
-          <p style="color: var(--text-muted);">أرقام مذهلة وتكاليف محادثات وتفاعل اقتصادية جداً.</p>
-          <!-- عرض صورة أخرى من لقطاتك المرفوعة -->
           <img src="Screenshot 2026-10-20 194442.png" alt="نتائج تفاعل الحملات">
         </div>
 
         <div class="result-box">
           <h3>💡 تحاليل المجموعات الإعلانية والمحادثات</h3>
-          <p style="color: var(--text-muted);"></p>
           <img src="Screenshot 2026-10-20 194430.png" alt="تحاليل الحملات">
         </div>
 
       </div>
 
-      <div style="text-align: center; margin-top: 30px;">
+      <div style="text-align: center; margin-top: 35px;">
         <a href="https://wa.me/201140912013?text=مرحباً%20يوسف،%20أرغب%20في%20الاطلاع%20على%20المزيد%20من%20تقارير%20ونتائج%20الحملات" class="btn-outline" target="_blank">
           📊 طلب الاطلاع على تقارير الحملات التفصيلية ↗
         </a>
