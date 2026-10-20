@@ -39,11 +39,26 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    header .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    header .brand img {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--accent);
     }
     header a { color: var(--text); text-decoration: none; font-weight: 600; }
-    header nav { display: flex; gap: 20px; }
+    header nav { display: flex; gap: 15px; align-items: center; flex-wrap: wrap; }
     header nav a { color: var(--text-muted); font-size: 14px; transition: 0.3s; }
     header nav a:hover { color: var(--accent); }
+    
     .hero {
       padding: 100px 20px;
       max-width: 1000px;
@@ -61,7 +76,6 @@
       margin-bottom: 20px;
       border: 1px solid rgba(0, 255, 136, 0.2);
     }
-    /* تكبير وتضخيم الفونت فوق خالص بشكل ضخم وواضح */
     .hero h1 {
       font-size: 56px;
       margin-bottom: 25px;
@@ -91,7 +105,6 @@
     }
     .btn:hover { background: #00cc6a; transform: translateY(-2px); }
     
-    /* تصميم الزرار الجديد (اتفرج عالتحاليل والاعلانات) */
     .btn-secondary {
       background: transparent;
       color: var(--text);
@@ -148,10 +161,11 @@
     .card h3 { font-size: 22px; margin-bottom: 15px; color: var(--accent); }
     .card p { color: var(--text-muted); font-size: 15px; }
     
+    /* تنسيق صور لقطات الشاشة للنتائج والأرقام */
     .results-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 30px;
+      gap: 35px;
       margin-top: 40px;
     }
     .result-box {
@@ -165,6 +179,14 @@
       color: var(--accent);
       font-size: 22px;
       margin-bottom: 15px;
+    }
+    .result-box img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      margin-top: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
     }
     .stats-row {
       display: flex;
@@ -221,20 +243,20 @@
 <body>
 
   <header>
-    <div>
-      <a href="#home"><strong>يوسف السعيد</strong> <small style="color: var(--accent);">· MEDIA BUYER</small></a>
+    <div class="brand">
+      <img src="my-photo.jpg" alt="يوسف السعيد" onerror="this.style.display='none'">
+      <a href="#home"><strong>يوسف السعيد</strong> <br><small style="color: var(--accent);">· MEDIA BUYER</small></a>
     </div>
     <nav>
       <a href="#services">الخدمات</a>
       <a href="#results">أرقام وتحاليل الحملات</a>
       <a href="#proof">آراء العملاء</a>
-      <a href="#about">عنّي</a>
+      <a href="https://wa.me/201140912013?text=مرحباً%20يوسف،%20أرغب%20في%20تعديل%20بعض%20البيانات%20أو%20الصور%20في%20الموقع" style="color: var(--accent); font-weight: bold;" target="_blank">⚙️ تعديل البيانات</a>
+      <a href="https://wa.me/201140912013" class="btn" style="padding: 6px 16px; font-size: 13px;" target="_blank">ابدأ معايا</a>
     </nav>
-    <a href="https://wa.me/201140912013" class="btn" style="padding: 8px 20px; font-size: 14px;" target="_blank">ابدأ معايا</a>
   </header>
 
   <main>
-    <!-- القسم الرئيسي مع الفونت الضخم والزرارين الواضحين -->
     <section class="hero" id="home">
       <span class="badge">MEDIA BUYER · PERFORMANCE MARKETER</span>
       <p style="direction: ltr; font-weight: bold; color: var(--accent); font-size: 20px;">YOUSEF EL SAEED</p>
@@ -278,47 +300,35 @@
       </div>
     </section>
 
-    <!-- قسم تحاليل وأرقام الحملات -->
+    <!-- قسم تحاليل وأرقام الحملات مع لقطات الشاشة الحقيقية -->
     <section id="results">
       <span>03 — TRACK RECORD & ANALYTICS</span>
-      <h2>تحاليل وأرقام حقيقية تعكس كفاءة إدارة الحسابات.</h2>
+      <h2>تحاليل ولقطات حقيقية من إحصائيات الحسابات والحملات.</h2>
       <div class="results-grid">
-        <div class="result-box">
-          <h3>إجمالي الإنفاق وإدارة ميزانيات الحسابات</h3>
-          <p style="color: var(--text-muted); margin-bottom: 10px;">إدارة ميزانيات ضخمة بكفاءة واحترافية عالية للوصول للجمهور المستهدف.</p>
-          <div class="stats-row">
-            <div class="stat-item">
-              <span>إجمالي الإنفاق الإعلاني</span>
-              <strong>+974,997 ج.م</strong>
-            </div>
-            <div class="stat-item">
-              <span>إجمالي الوصول (Reach)</span>
-              <strong>14.2M+ حساب</strong>
-            </div>
-            <div class="stat-item">
-              <span>مرات الظهور (Impressions)</span>
-              <strong>84.7M+ ظهور</strong>
-            </div>
-          </div>
-        </div>
         
         <div class="result-box">
-          <h3>تحاليل نتائج المحادثات والتفاعل القياسية</h3>
-          <p style="color: var(--text-muted); margin-bottom: 10px;">نتائج مذهلة في خفض التكاليف وتحقيق أعلى معدلات تفاعل ومحادثات.</p>
-          <div class="stats-row">
-            <div class="stat-item">
-              <span>التفاعل القياسي</span>
-              <strong>2M+ تفاعل (بتكلفة 0.02 ج.م)</strong>
-            </div>
-            <div class="stat-item">
-              <span>تكلفة المحادثات</span>
-              <strong>تبدأ من 2.68 ج.م إلى 4.78 ج.م</strong>
-            </div>
-          </div>
+          <h3>📊 تقرير الأداء الشامل وإجمالي الإنفاق</h3>
+          <p style="color: var(--text-muted);">إدارة ميزانيات ضخمة وتحقيق ملايين المشاهدات والوصول.</p>
+          <!-- عرض صورتك الأولى المرفوعة -->
+          <img src="Screenshot 2026-10-20 194522.png" alt="تقرير أداء الحملات">
         </div>
+
+        <div class="result-box">
+          <h3>🚀 نتائج الحملات والتفاعل القياسي</h3>
+          <p style="color: var(--text-muted);">أرقام مذهلة وتكاليف محادثات وتفاعل اقتصادية جداً.</p>
+          <!-- عرض صورة أخرى من لقطاتك المرفوعة -->
+          <img src="Screenshot 2026-10-20 194442.png" alt="نتائج تفاعل الحملات">
+        </div>
+
+        <div class="result-box">
+          <h3>💡 تحاليل المجموعات الإعلانية والمحادثات</h3>
+          <p style="color: var(--text-muted);"></p>
+          <img src="Screenshot 2026-10-20 194430.png" alt="تحاليل الحملات">
+        </div>
+
       </div>
 
-      <div style="text-align: center;">
+      <div style="text-align: center; margin-top: 30px;">
         <a href="https://wa.me/201140912013?text=مرحباً%20يوسف،%20أرغب%20في%20الاطلاع%20على%20المزيد%20من%20تقارير%20ونتائج%20الحملات" class="btn-outline" target="_blank">
           📊 طلب الاطلاع على تقارير الحملات التفصيلية ↗
         </a>
