@@ -55,24 +55,34 @@
       color: var(--accent);
       padding: 6px 16px;
       border-radius: 20px;
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 700;
       display: inline-block;
       margin-bottom: 20px;
       border: 1px solid rgba(0, 255, 136, 0.2);
     }
+    /* تكبير وتضخيم الفونت فوق خالص بشكل ضخم وواضح */
     .hero h1 {
-      font-size: 48px;
+      font-size: 56px;
       margin-bottom: 25px;
       font-weight: 900;
+      line-height: 1.3;
     }
     .hero h1 span { color: var(--accent); }
-    .hero p { font-size: 18px; color: var(--text-muted); max-width: 700px; margin: 0 auto 35px; }
+    .hero p { font-size: 20px; color: var(--text-muted); max-width: 750px; margin: 0 auto 35px; }
+    
+    .btn-group {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
     .btn {
       background: var(--accent);
       color: #000;
       padding: 14px 32px;
-      font-size: 16px;
+      font-size: 17px;
       font-weight: bold;
       border-radius: 8px;
       text-decoration: none;
@@ -81,7 +91,26 @@
     }
     .btn:hover { background: #00cc6a; transform: translateY(-2px); }
     
-    /* تصميم زرار التقارير الإضافي */
+    /* تصميم الزرار الجديد (اتفرج عالتحاليل والاعلانات) */
+    .btn-secondary {
+      background: transparent;
+      color: var(--text);
+      border: 2px solid var(--border);
+      padding: 14px 32px;
+      font-size: 17px;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      transition: 0.3s;
+    }
+    .btn-secondary:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: var(--accent-dim);
+      transform: translateY(-2px);
+    }
+
     .btn-outline {
       background: transparent;
       color: var(--accent);
@@ -205,12 +234,17 @@
   </header>
 
   <main>
+    <!-- القسم الرئيسي مع الفونت الضخم والزرارين الواضحين -->
     <section class="hero" id="home">
       <span class="badge">MEDIA BUYER · PERFORMANCE MARKETER</span>
-      <p style="direction: ltr; font-weight: bold; color: var(--accent);">YOUSEF EL SAEED</p>
+      <p style="direction: ltr; font-weight: bold; color: var(--accent); font-size: 20px;">YOUSEF EL SAEED</p>
       <h1>مش بنشغل إعلانات…<br><span>بنبني نظام</span> يخلّي كل جنيه إعلاني له هدف.</h1>
       <p>بساعد البراندات والخدمات على بناء وإدارة حملات إعلانية مبنية على البيانات، من الاستراتيجية واختبار الرسائل لحد التحسين وقياس الأداء.</p>
-      <a href="https://wa.me/201140912013" class="btn" target="_blank">تواصل معايا على واتساب ↙</a>
+      
+      <div class="btn-group">
+        <a href="https://wa.me/201140912013" class="btn" target="_blank">تواصل معايا على واتساب ↙</a>
+        <a href="#results" class="btn-secondary">🎬 اتفرج على التحاليل والإعلانات ⬇</a>
+      </div>
     </section>
 
     <section id="services">
@@ -244,7 +278,7 @@
       </div>
     </section>
 
-    <!-- قسم تحاليل وأرقام الحملات مع زرار متابعة النتائج والتقارير -->
+    <!-- قسم تحاليل وأرقام الحملات -->
     <section id="results">
       <span>03 — TRACK RECORD & ANALYTICS</span>
       <h2>تحاليل وأرقام حقيقية تعكس كفاءة إدارة الحسابات.</h2>
@@ -255,15 +289,15 @@
           <div class="stats-row">
             <div class="stat-item">
               <span>إجمالي الإنفاق الإعلاني</span>
-              <strong>+974,997 ج.م[cite: 36]</strong>
+              <strong>+974,997 ج.م</strong>
             </div>
             <div class="stat-item">
               <span>إجمالي الوصول (Reach)</span>
-              <strong>14.2M+ حساب[cite: 36]</strong>
+              <strong>14.2M+ حساب</strong>
             </div>
             <div class="stat-item">
               <span>مرات الظهور (Impressions)</span>
-              <strong>84.7M+ ظهور[cite: 36]</strong>
+              <strong>84.7M+ ظهور</strong>
             </div>
           </div>
         </div>
@@ -274,17 +308,16 @@
           <div class="stats-row">
             <div class="stat-item">
               <span>التفاعل القياسي</span>
-              <strong>2M+ تفاعل (بتكلفة 0.02 ج.م)[cite: 34]</strong>
+              <strong>2M+ تفاعل (بتكلفة 0.02 ج.م)</strong>
             </div>
             <div class="stat-item">
               <span>تكلفة المحادثات</span>
-              <strong>تبدأ من 2.68 ج.م إلى 4.78 ج.م[cite: 33, 35]</strong>
+              <strong>تبدأ من 2.68 ج.م إلى 4.78 ج.م</strong>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- خانة وزرار تفاعلي لطلب التقارير -->
       <div style="text-align: center;">
         <a href="https://wa.me/201140912013?text=مرحباً%20يوسف،%20أرغب%20في%20الاطلاع%20على%20المزيد%20من%20تقارير%20ونتائج%20الحملات" class="btn-outline" target="_blank">
           📊 طلب الاطلاع على تقارير الحملات التفصيلية ↗
@@ -292,7 +325,7 @@
       </div>
     </section>
 
-    <!-- قسم آراء العملاء (الكومنتات والشهادات) -->
+    <!-- قسم آراء العملاء (الكومنتات) -->
     <section id="proof">
       <span>05 — PEOPLE, NOT CLAIMS</span>
       <h2>ناس اشتغلت معايا (آراء العملاء).</h2>
