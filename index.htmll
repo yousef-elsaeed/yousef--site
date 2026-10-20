@@ -1,22 +1,3 @@
-تمام يا بيبو، دي صورة تقرير شامل (إجمالي الحساب - Account Overview) وبتوضح أرقام وإحصائيات ضخمة ومحترمة جداً تدل على خبرتك الكبيرة في إدارة الميزانيات الكبيرة:
-
-* **إجمالي المبلغ المنفق:** أكثر من 974,997 جنيه مصري (قريب من المليون جنيه إعلاني تم إدارته بكفاءة).
-
-
-* **إجمالي مرات الظهور:** أكثر من 84.7 مليون ظهور.
-
-
-* **إجمالي الوصول:** أكثر من 14.2 مليون حساب على Meta.
-
-
-
-كده كل الصور وصلت ومعانا أحلى أرقام وإحصائيات تدل على الشغل المحترف والنتائج القوية.
-
-جهزت لك **الكود النهائي والمطور بالكامل**، ومضاف إليه قسم **"نتائج الحملات وأداء الإعلانات"** بتنسيق احترافي جداً يعرض قوة هذه النتائج والأرقام القياسية:
-
-### الكود النهائي لموقعك (انسخه بالكامل وصقه في ملف `index.html` في مستودعك على GitHub):
-
-```html
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -118,7 +99,7 @@
     .card h3 { font-size: 22px; margin-bottom: 15px; color: var(--accent); }
     .card p { color: var(--text-muted); font-size: 15px; }
     
-    /* تصميم قسم نتائج الحملات والأرقام */
+    /* تصميم قسم تحليل نتائج الحملات والأرقام */
     .results-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -145,6 +126,8 @@
       border-radius: 8px;
       margin-top: 15px;
       border: 1px solid var(--border);
+      flex-wrap: wrap;
+      gap: 10px;
     }
     .stat-item span {
       display: block;
@@ -156,6 +139,7 @@
       color: var(--accent);
     }
 
+    /* تصميم قسم آراء العملاء (الكومنتات والشهادات) */
     .testimonials {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -173,6 +157,7 @@
     }
     .testimonial-card p { color: var(--text); font-size: 15px; margin-bottom: 20px; }
     .testimonial-card footer { font-size: 14px; color: var(--accent); font-weight: bold; }
+    
     .contact-section {
       background: var(--surface-card);
       border: 1px solid var(--border);
@@ -194,7 +179,7 @@
     </div>
     <nav>
       <a href="#services">الخدمات</a>
-      <a href="#results">أرقام ونتائج</a>
+      <a href="#results">أرقام وتحاليل الحملات</a>
       <a href="#proof">آراء العملاء</a>
       <a href="#about">عنّي</a>
     </nav>
@@ -241,53 +226,55 @@
       </div>
     </section>
 
-    <!-- قسم نتائج الحملات والأداء بالأرقام والتقارير -->
+    <!-- قسم تحاليل وأرقام الحملات الإعلانية الحقيقية -->
     <section id="results">
-      <span>03 — TRACK RECORD & RESULTS</span>
-      <h2>أرقام حقيقية تعكس كفاءة إدارة الحملات.</h2>
+      <span>03 — TRACK RECORD & ANALYTICS</span>
+      <h2>تحاليل وأرقام حقيقية تعكس كفاءة إدارة الحسابات.</h2>
       <div class="results-grid">
         <div class="result-box">
-          <h3>إجمالي إدارة الحسابات والإنفاق الإعلاني</h3>
-          <p style="color: var(--text-muted); margin-bottom: 10px;">إدارة ميزانيات ضخمة وتحقيق أعلى وصول بكفاءة تامة.</p>
+          <h3>إجمالي الإنفاق وإدارة ميزانيات الحسابات</h3>
+          <p style="color: var(--text-muted); margin-bottom: 10px;">إدارة ميزانيات ضخمة بكفاءة واحترافية عالية للوصول للجمهور المستهدف.</p>
           <div class="stats-row">
             <div class="stat-item">
-              <span>إجمالي الإنفاق</span>
+              <span>إجمالي الإنفاق الإعلاني</span>
               <strong>+974,997 ج.م[cite: 36]</strong>
             </div>
             <div class="stat-item">
-              <span>إجمالي الوصول</span>
-              <strong>14.2M+[cite: 36]</strong>
+              <span>إجمالي الوصول (Reach)</span>
+              <strong>14.2M+ حساب[cite: 36]</strong>
             </div>
             <div class="stat-item">
-              <span>مرات الظهور</span>
-              <strong>84.7M+[cite: 36]</strong>
+              <span>مرات الظهور (Impressions)</span>
+              <strong>84.7M+ ظهور[cite: 36]</strong>
             </div>
           </div>
         </div>
+        
         <div class="result-box">
-          <h3>حملات المحادثات والتفاعل القياسية</h3>
-          <p style="color: var(--text-muted); margin-bottom: 10px;">نتائج مذهلة في توليد المحادثات والتفاعل بتكاليف اقتصادية تنافسية جداً.</p>
+          <h3>تحاليل نتائج المحادثات والتفاعل القياسية</h3>
+          <p style="color: var(--text-muted); margin-bottom: 10px;">نتائج مذهلة في خفض التكاليف وتحقيق أعلى معدلات تفاعل ومحادثات.</p>
           <div class="stats-row">
             <div class="stat-item">
-              <span>أعلى تفاعل</span>
-              <strong>2M+ تفاعل (0.02 ج.م)[cite: 34]</strong>
+              <span>التفاعل القياسي</span>
+              <strong>2M+ تفاعل (بتكلفة 0.02 ج.م)[cite: 34]</strong>
             </div>
             <div class="stat-item">
-              <span>محادثات فعالة</span>
-              <strong>تكلفة تبدأ من 2.68 ج.م[cite: 33]</strong>
+              <span>تكلفة المحادثات</span>
+              <strong>تبدأ من 2.68 ج.م إلى 4.78 ج.م[cite: 33, 35]</strong>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- قسم آراء العملاء (الكومنتات والشهادات) -->
     <section id="proof">
       <span>05 — PEOPLE, NOT CLAIMS</span>
-      <h2>ناس اشتغلت معايا.</h2>
+      <h2>ناس اشتغلت معايا (آراء العملاء).</h2>
       <div class="testimonials">
         <div class="testimonial-card">
           <p>"بصراحة التعامل مع يوسف مريح جدًا، فاهم هو بيعمل إيه ودايمًا عنده سبب لكل قرار في الحملة 🔥❤️"</p>
-          <footer>— حسام إبراهيم</footer>
+          <footer>— حسام إبراهيم البغدادي</footer>
         </div>
         <div class="testimonial-card">
           <p>"الفرق اللي لاحظته إن الموضوع مش مجرد إعلانات وخلاص، يوسف بيتابع الأرقام وبيفهمك إيه اللي شغال وإيه اللي محتاج يتغير"</p>
@@ -295,11 +282,19 @@
         </div>
         <div class="testimonial-card">
           <p>"من الناس اللي بتهتم بالتفاصيل فعلًا، وده فرق معانا جدًا في الشغل ❤️"</p>
-          <footer>— إبراهيم فاهيم</footer>
+          <footer>— إبراهيم فاهيم العيسوي</footer>
         </div>
         <div class="testimonial-card">
           <p>"بصراحة يوسف شاطر في الحتة دي، خصوصًا في تحليل الحملة ومعرفة المشكلة فين بدل ما نفضل نزود فلوس وخلاص 🔥"</p>
           <footer>— أحمد مصباح</footer>
+        </div>
+        <div class="testimonial-card">
+          <p>"التعامل كان ممتاز جدًا، والأهم إن يوسف بيفهمك اللي بيحصل في الحملة بطريقة بسيطة ومباشرة"</p>
+          <footer>— سوزان نصر</footer>
+        </div>
+        <div class="testimonial-card">
+          <p>"يوسف مش من نوعية الناس اللي تشغل الإعلان وتختفي 😂 المتابعة والتحليل عنده فرق كبير فعلًا 🔥."</p>
+          <footer>— محمد الشبراوي</footer>
         </div>
       </div>
     </section>
@@ -326,7 +321,3 @@
 
 </body>
 </html>
-
-```
-
-انسخ الكود ده وحطه في مستودعك على GitHub، ومبروك عليك أقوى موقع احترافي باسمك ورقمك وأرقامك القياسية! بالتوفيق دايمًا يا بيبو.
