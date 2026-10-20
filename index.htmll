@@ -1,3 +1,12 @@
+فكرة ممتازة جداً يا بيبو! تخلي العميل أو الزائر يقدر يضغط على زرار أو خانة (مثل "عرض تقارير الحملات الكاملة" أو زر تفاعلي) تفتح له تقارير تفصيلية أو تنقله لصفحة تانية أو رابط خارجي (زي ملف Google Drive، أو لوحة بيانات، أو صور التقارير كاملة).
+
+أنا أضفت لك **زرار (زر تفاعلي أنيق ومضيء)** في موقعك تحت قسم التحاليل، ومكتوب عليه **"عرض تقارير الحملات التفصيلية ↗"**.
+
+كل اللي هتعمله إنك هتاخد الكود الجديد ده وتحطه جوه ملف `index.html` في مستودعك على GitHub. (ولو حابب تربط الزرار ده برابط معين — زي رابط ملف تقارير أو درايف — قولي الرابط وأنا أحطه لك جوه الكود مباشرة).
+
+### الكود الشامل والمحدث (وفيه زرار متابعة النتائج):
+
+```html
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -80,6 +89,26 @@
       transition: 0.3s;
     }
     .btn:hover { background: #00cc6a; transform: translateY(-2px); }
+    
+    /* تصميم زرار التقارير الإضافي */
+    .btn-outline {
+      background: transparent;
+      color: var(--accent);
+      border: 2px solid var(--accent);
+      padding: 12px 28px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      transition: 0.3s;
+      margin-top: 20px;
+    }
+    .btn-outline:hover {
+      background: var(--accent-dim);
+      transform: translateY(-2px);
+    }
+
     section { padding: 80px 20px; max-width: 1000px; margin: 0 auto; border-bottom: 1px solid var(--border); }
     section h2 { font-size: 36px; margin-bottom: 20px; font-weight: 800; }
     .grid-services {
@@ -99,7 +128,6 @@
     .card h3 { font-size: 22px; margin-bottom: 15px; color: var(--accent); }
     .card p { color: var(--text-muted); font-size: 15px; }
     
-    /* تصميم قسم تحليل نتائج الحملات والأرقام */
     .results-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -139,7 +167,6 @@
       color: var(--accent);
     }
 
-    /* تصميم قسم آراء العملاء (الكومنتات والشهادات) */
     .testimonials {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -226,7 +253,7 @@
       </div>
     </section>
 
-    <!-- قسم تحاليل وأرقام الحملات الإعلانية الحقيقية -->
+    <!-- قسم تحاليل وأرقام الحملات مع زرار متابعة النتائج -->
     <section id="results">
       <span>03 — TRACK RECORD & ANALYTICS</span>
       <h2>تحاليل وأرقام حقيقية تعكس كفاءة إدارة الحسابات.</h2>
@@ -264,6 +291,13 @@
             </div>
           </div>
         </div>
+      </div>
+
+      <!-- خانة/زرار تفاعلي لمتابعة النتائج والتقارير -->
+      <div style="text-align: center; margin-top: 35px;">
+        <a href="https://wa.me/201140912013?text=مرحباً%20يوسف،%20أرغب%20في%20اطلاع%20على%20المزيد%20من%20تقارير%20ونتائج%20الحملات" class="btn-outline" target="_blank">
+          📊 طلب الاطلاع على تقارير الحملات التفصيلية ↗
+        </a>
       </div>
     </section>
 
@@ -321,3 +355,7 @@
 
 </body>
 </html>
+
+```
+
+حط الكود ده في ملف `index.html` عندك على GitHub واعمل حفظ، وافتح موقعك واضغط **`Ctrl` + `F5**`، وهتلاقي زرار تقارير الحملات التفصيلية منور وشغال معاك بيحول العميل مباشرة على واتسابك لطلب تفاصيل التقارير! بالتوفيق يا بيبو!
